@@ -841,7 +841,7 @@ a {
     line-height: 20px;
     color: #000;
     font-size: 12px;
-    background: #51eaea;
+    background:  #12a91b;
     right: -5px; }
 
 .search-wrap {
@@ -1132,9 +1132,84 @@ a {
   align-items: center;
 }
 
+/* Responsive cho Mac */
+@media screen and (min-width: 1280px) {
+  .banner-navbar img {
+    max-width: 100%; /* Hình ảnh co lại theo chiều ngang */
+    height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ khung hình */
+  }
+
+  .banner-navbar div {
+    right: 200px; /* Điều chỉnh vị trí của phần tử trong banner cho Mac */
+    top: 210px;
+    height: 150px;
+    width: 250px;
+  }
+}
+
+/* Responsive cho các thiết bị có màn hình nhỏ hơn */
+@media screen and (max-width: 1280px) {
+  .banner-navbar img {
+    max-width: 100%; /* Hình ảnh co lại theo chiều ngang */
+    height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ khung hình */
+  }
+
+  .banner-navbar div {
+    right: 10px; /* Điều chỉnh vị trí của phần tử trong banner cho các thiết bị nhỏ hơn */
+    top: 110px;
+    height: 100px;
+    width: 150px;
+  }
+}
 
 
 .potinst img{
   width: 1860px ;
   height: 450px;
+}
+
+
+.blinking-image {
+  animation: blink 0.5s infinite; /* Sử dụng animation có tên "blink" với thời gian 1s và lặp vô hạn */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1; /* Trạng thái ban đầu */
+  }
+  50% {
+    opacity: 0; /* Trạng thái ẩn */
+  }
+  100% {
+    opacity: 1; /* Trạng thái hiển thị lại */
+  }
+}
+/* Định nghĩa animation có tên là "flip" */
+@keyframes flip {
+  0%, 100% {
+    transform: rotateY(0deg); /* Không xoay */
+  }
+  50% {
+    transform: rotateY(180deg); /* Xoay 180 độ */
+  }
+}
+
+/* Áp dụng animation vào thẻ img */
+.flipping-image {
+  animation: flip 4s linear infinite; /* Lật liên tục trong vòng 4 giây vô hạn lần */
+}
+
+/* Định nghĩa animation có tên là "zoom" */
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(1); /* Kích thước bình thường */
+  }
+  50% {
+    transform: scale(1.2); /* Phóng to 1.2 lần */
+  }
+}
+
+/* Áp dụng animation vào thẻ img */
+.zooming-image {
+  animation: zoom 2s linear infinite; /* Phóng to trong vòng 2 giây vô hạn lần */
 }
